@@ -563,15 +563,15 @@ endif ()
 # For GEMM3M
 set(USE_GEMM3M 0)
 
-if (DEFINED ARCH)
-  if (X86 OR X86_64 OR ${ARCH} STREQUAL "ia64" OR MIPS64)
-    set(USE_GEMM3M 1)
-  endif ()
+# if (DEFINED ARCH)
+#   if (X86 OR X86_64 OR ${ARCH} STREQUAL "ia64" OR MIPS64)
+#     set(USE_GEMM3M 1)
+#   endif ()
 
-  if (${CORE} STREQUAL "generic")
-    set(USE_GEMM3M 0)
-  endif ()
-endif ()
+#   if (${CORE} STREQUAL "generic")
+#     set(USE_GEMM3M 0)
+#   endif ()
+# endif ()
 
 
 #export OSNAME
